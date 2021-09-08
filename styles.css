@@ -56,30 +56,56 @@ body {
   left: -10;
 }
 
-.pointer-container{
-    position: absolute;
-    top: -40px;
-    left: 140px;
-    width: 20px;
-    height: 190px;
-    animation: orbit 7.5s infinite forwards linear;
-    transform-origin: bottom center;
+.pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 190px;
+  animation: orbit 7.5s infinite forwards linear;
+  transform-origin: bottom center;
 }
 
-.pointer{
-    display: block;
-    border-radius: 50%;
-    background-color: #fff;
-    width: 20px;
-    height: 20px;
+.pointer {
+  display: block;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
 }
 
-@keyframes orbit{
-    0% {
-        transform: rotate(0deg);
-    }
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
 }
